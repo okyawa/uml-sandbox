@@ -210,3 +210,37 @@ classA <|-- classB : implements
 classC *-- classD : composition
 classE o-- classF : association
 ```
+
+
+---
+
+
+# Cardinality / Multiplicity on relations
+
+- 多重度表記は、関連付けの終わり近くに配置
+
+## カーディナリティのオプション
+
+- `1` Only 1
+- `0..1` Zero or One
+- `1..*` One or more
+- `*` Many
+- `n` n {where n>1}
+- `0..n` zero to n {where n>1}
+- `1..n` one to n {where n>1}
+
+## カーディナリティの定義
+
+- カーディナリティは、指定された矢印の前(オプション)と後(オプション)の引用符でカーディナリティテキストを配置することで簡単に定義できる
+```
+[classA] "cardinality1" [Arrow] "cardinality2" [ClassB]:LabelText
+```
+```mermaid
+classDiagram
+  Customer "1" --> "*" Ticket
+  Student "1" --> "1..*" Course
+  Galaxy --> "many" Star : Contains
+```
+
+
+
