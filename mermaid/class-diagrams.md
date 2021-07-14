@@ -144,3 +144,53 @@ Square : +getMessage() List~string~
 - `~` Package/Internal
 - `*` Abstract
 - `$` Static
+
+
+---
+
+
+# Defining Relationship
+
+- `relationship` は、クラス図とオブジェクト図に見られる特定のタイプの論理接続をカバーする一般的な用語
+
+```
+[classA][Arrow][ClassB]:LabelText
+```
+
+Type   | Description
+-------| ------------
+`<|--` | 継承 (Inheritance)
+`o--`  | 集約 (Aggregation) (クラス間の関連で全体と一部という関係性を表現)
+`*--`  | コンポジション (Composition) (集約よりも強い集約)
+`-->`  | 関連 (Association) (クラス間の関連を表現)
+`..>`  | 依存 (Dependency)
+`..|>` | 実現 (Realization) (クラス間のインターフェースを表現)
+`--`   | 直線リンク (Link) (Solid)
+`..`   | 破線Link (Dashed)
+
+```mermaid
+classDiagram
+classA <|-- classB
+classC *-- classD
+classE o-- classF
+classG <-- classH
+classI -- classJ
+classK <.. classL
+classM <|.. classN
+classO .. classP
+```
+
+- ラベルを使用して、2つのクラス間の関係の性質を説明することも可能
+- 矢印は反対方向にも使用できる
+```mermaid
+classDiagram
+classA --|> classB : 継承(Inheritance)
+classC --* classD : コンポジション(Composition
+classE --o classF : 集約(Aggregation)
+classG --> classH : 関連(Association)
+classI -- classJ : 直線リンク(Link)(Solid)
+classK ..> classL : 依存(Dependency)
+classM ..|> classN : 実現(Realization)
+classO .. classP : 破線Link(Dashed)
+```
+
