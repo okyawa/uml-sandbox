@@ -185,7 +185,7 @@ classO .. classP
 ```mermaid
 classDiagram
 classA --|> classB : 継承(Inheritance)
-classC --* classD : コンポジション(Composition
+classC --* classD : コンポジション(Composition)
 classE --o classF : 集約(Aggregation)
 classG --> classH : 関連(Association)
 classI -- classJ : 直線リンク(Link)(Solid)
@@ -194,3 +194,19 @@ classM ..|> classN : 実現(Realization)
 classO .. classP : 破線Link(Dashed)
 ```
 
+
+---
+
+
+# Labels on Relations
+
+- リレーションにラベルテキストを追加することが可能
+```
+[classA][Arrow][ClassB]:LabelText
+```
+```mermaid
+classDiagram
+classA <|-- classB : implements
+classC *-- classD : composition
+classE o-- classF : association
+```
