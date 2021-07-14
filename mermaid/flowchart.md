@@ -1,5 +1,6 @@
 # Flowcharts - Basic Syntax
 
+
 ## A node (default)
 
 ```mermaid
@@ -15,6 +16,9 @@ graph LR
 ```
 
 
+---
+
+
 # Graph
 
 ```mermaid
@@ -28,6 +32,9 @@ graph LR
 ```
 
 
+---
+
+
 # Flowchart Orientation
 
 Possible FlowChart orientations are:
@@ -37,6 +44,9 @@ Possible FlowChart orientations are:
 - `BT` - bottom to top
 - `RL` - right to left
 - `LR` - left to right
+
+
+---
 
 
 # Node shapes
@@ -122,6 +132,8 @@ graph TD
 graph TD
   B[\Go shopping/]
 ```
+
+---
 
 
 # Links between nodes
@@ -261,4 +273,24 @@ Thick             | ===  | ====  | =====
 Thick with arrow  | ==>  | ===>  | ====>
 Dotted            | -.-  | -..-  | -...-
 Dotted with arrow | -.-> | -..-> | -...->
+
+
+---
+
+
+# Special characters that break syntax
+
+
+```mermaid
+graph LR
+  id1["This is the (text) in the box"]
+```
+
+## Entity codes to escape characters
+
+```mermaid
+graph LR
+  A["A double quote:#quot;"] -->B["A dec char:#9829;"]
+```
+
 
