@@ -375,3 +375,63 @@ flowchart LR
   A --> TOP --> B
   B1 --> B2
 ```
+
+
+---
+
+
+# Comments
+
+- コメントアウトは先頭に `%%` を付与
+
+```mermaid
+graph LR
+%% this is a comment A -- text --> B{node}
+  A -- text --> B -- text2 --> C
+```
+
+
+---
+
+
+# Styling and classes
+
+
+## Styling a node
+
+```mermaid
+graph LR
+  id1(start)-->id2(stop)
+  style id1 fill:#f9f,stroke:#333,stroke-width:4px
+  style id2 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+```
+
+## Classes
+
+### スタイルのクラス定義
+```
+  classDef className fill:#f9f,stroke:#333,stroke-width:4px;
+```
+
+### ノードへのクラスのアタッチ
+```
+  class nodeId1 className;
+```
+- 1つのステートメントでノードのリストにクラスをアタッチすることも可能
+```
+class nodeId1,nodeId2 className;
+```
+- クラスを追加する短い形式は、 `:::` 演算子を使用してクラス名をノードにアタッチする
+```mermaid
+graph LR
+  A:::someClass --> B
+  classDef someClass fill:#f96;
+```
+
+## Default class
+
+- クラスに `default` という名前が付けられている場合、特定のクラス定義なしですべてのクラスに割り当てられる
+```
+classDef default fill:#f9f,stroke:#333,stroke-width:4px;
+```
+
