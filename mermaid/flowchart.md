@@ -294,3 +294,36 @@ graph LR
 ```
 
 
+--
+
+
+# Subgraphs
+
+```
+subgraph title
+  graph definition
+end
+```
+
+```mermaid
+graph TB
+  c1-->a2
+  subgraph one
+  a1-->a2
+  end
+  subgraph two
+  b1-->b2
+  end
+  subgraph three
+  c1-->c2
+  end
+```
+
+- サブグラフに明示的なIDを設定することも可能
+```mermaid
+graph TB
+  c1-->a2
+  subgraph ide1 [one]
+  a1-->a2
+  end
+```
