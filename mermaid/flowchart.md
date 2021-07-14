@@ -435,3 +435,18 @@ graph LR
 classDef default fill:#f9f,stroke:#333,stroke-width:4px;
 ```
 
+
+---
+
+
+# Basic support for fontawesome
+
+```mermaid
+graph TD
+  B["fa:fa-twitter for peace"]
+  B-->C[fa:fa-ban forbidden]
+  B-->D(fa:fa-spinner);
+  B-->E(A fa:fa-camera-retro perhaps?);
+```
+
+
