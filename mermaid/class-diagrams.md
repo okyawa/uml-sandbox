@@ -243,4 +243,45 @@ classDiagram
 ```
 
 
+---
 
+
+# Annotations on classes
+
+- クラスのメタデータのような特定のマーカーテキストでクラスに注釈を付けて、その性質を明確に示すことができる
+- 注釈は、 `<<` と `>>` で定義
+- クラスに注釈を追加する方法は2つ
+
+## 一般的な注釈の例
+
+- `<<Interface>>` To represent an Interface class
+- `<<abstract>>` To represent an abstract class
+- `<<Service>>` To represent a service class
+- `<<enumeration>>` To represent an enum
+
+## クラスが定義された後の別の行に定義する例
+
+```mermaid
+classDiagram
+class Shape
+<<interface>> Shape
+```
+
+## クラス定義とともにネストされた内側に定義する例
+
+```mermaid
+classDiagram
+class Shape {
+  <<interface>>
+  noOfVertices
+  draw()
+}
+class Color {
+  <<enumeration>>
+  RED
+  BLUE
+  GREEN
+  WHITE
+  BLACK
+}
+```
