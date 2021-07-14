@@ -450,3 +450,21 @@ graph TD
 ```
 
 
+---
+
+
+# Graph declarations with spaces between vertices and link and without semicolon
+
+- グラフ宣言では、ステートメントもセミコロンなしで終了できるようになった
+- グラフステートメントをセミコロンで終了することはオプション
+- 頂点とリンクの間には単一のスペースが許可される
+- ただし、頂点とそのテキスト、およびリンクとそのテキストの間にスペースがあってはならない
+
+```mermaid
+graph LR
+  A[Hard edge] -->|Link text| B(Round edge)
+  B --> C{Decision}
+  C -->|One| D[Result one]
+  C -->|Two| E[Result two]
+```
+
