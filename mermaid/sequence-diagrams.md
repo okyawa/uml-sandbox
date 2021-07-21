@@ -118,3 +118,25 @@ sequenceDiagram
   Note over Alice,John: A typical interaction
 ```
 
+
+---
+
+
+## Loops
+
+- シーケンス図でループを表現することができる
+
+```
+loop Loop text
+... statements ...
+end
+```
+
+```mermaid
+sequenceDiagram
+  Alice->John: Hello John, how are you?
+  loop Every minute
+    John-->Alice: Great!
+  end
+```
+
