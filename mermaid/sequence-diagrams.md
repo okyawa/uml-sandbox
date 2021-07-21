@@ -196,3 +196,23 @@ end
 ```
 
 
+---
+
+
+## Background Highlighting
+
+- 色付きの背景長方形を提供することにより、フローを強調表示することができる
+- 色は、 `rgb` および `rgba` 構文を使用して定義
+
+```
+rect rgb(0, 255, 0)
+... content ...
+end
+```
+
+```
+rect rgba(0, 0, 255, .1)
+... content ...
+end
+```
+
