@@ -216,3 +216,18 @@ rect rgba(0, 0, 255, .1)
 end
 ```
 
+
+---
+
+
+## Comments
+
+- コメントは先頭に `%%` を付ける
+
+```mermaid
+sequenceDiagram
+  Alice->>John: Hello John, how are you?
+  %% this is a comment
+  John-->>Alice: Great!
+```
+
