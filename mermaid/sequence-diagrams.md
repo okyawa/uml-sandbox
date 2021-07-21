@@ -61,3 +61,37 @@ Type   | Description
 `--)`  | Dotted line with a open arrow at the end (async)
 
 
+---
+
+
+## Activations
+
+- アクターをアクティブ化および非アクティブ化することができる
+- （非）アクティブ化は、専用の宣言にすることができる
+
+```mermaid
+sequenceDiagram
+  Alice->>John: Hello John, how are you?
+  active John
+  John-->>Alice: Great!
+  deactivate John
+```
+
+- メッセージ矢印に`+`/`-`サフィックスを追加することによるショートカット表記も可能
+
+```mermaid
+sequenceDiagram
+  Alice->>+John: Hello John, how are you?
+  John-->>-Alice: Great!
+```
+
+- 同じアクターに対してアクティベーションをスタックできる
+
+```mermaid
+sequenceDiagram
+  Alice->>+John: Hello John, how are you?
+  Alice->>+John: John, can you hear me?
+  John-->>-Alice: Hi Alice, I can hear you!
+  John-->>-Alice: I feel great!
+```
+
