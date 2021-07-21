@@ -176,3 +176,23 @@ sequenceDiagram
   end
 ```
 
+
+---
+
+
+## Parallel
+
+- 並行して発生しているアクションを表示することができる
+- 並列ブロックをネストすることも可能
+
+```
+par [Action 1]
+... statements ...
+and [Action 2]
+... statements ...
+and [Action N]
+... statements ...
+end
+```
+
+
