@@ -95,3 +95,26 @@ sequenceDiagram
   John-->>-Alice: I feel great!
 ```
 
+
+---
+
+
+## Notes
+
+- シーケンス図にメモを追加することができる
+- `Note [ right of | left of | over ] [Actor]`
+
+```mermaid
+sequenceDiagram
+  participant John
+  Note right of John: Text in note
+```
+
+- 2人のアクターにまたがるメモを作成することもできる
+
+```mermaid
+sequenceDiagram
+  Alice->John: Hello John, how are you?
+  Note over Alice,John: A typical interaction
+```
+
